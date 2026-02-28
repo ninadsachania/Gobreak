@@ -192,7 +192,7 @@ func main() {
 	}
 	defer sdl.Quit()
 
-	window, err := sdl.CreateWindow("Gobreak", 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, 0)
+	window, err := sdl.CreateWindow("Gobreak", sdl.WINDOWPOS_CENTERED, sdl.WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, 0)
 	if err != nil {
 		sdl.Log("Unable to initialize SDL: %s", sdl.GetError())
 		// return error.SDLInitializationFailed
